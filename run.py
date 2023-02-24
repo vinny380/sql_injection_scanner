@@ -34,3 +34,11 @@ def form_information(form):
     form_info["input_tags"] = input_tags
     return form_info
 
+
+    def vulnerability_scanner(response):
+        for error in errors:
+            if error in response.content.decode().lower():
+                return True
+        return False
+
+
